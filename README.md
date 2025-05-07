@@ -21,3 +21,8 @@ Then use GNU stow to create symlinks
 ```shell
 stow .
 ```
+
+## Reference
+
+[Stow has forever changed the way I manage my dotfiles
+](https://www.youtube.com/watch?v=y6XCebnB9gs)
