@@ -11,7 +11,6 @@ if [ -f "$HOME/.bashrc" ]; then
 fi
 
 alias reload='. ~/.bash_profile && echo ".bash_profile has been reloaded ✅"'
-alias vs='open -a "Visual Studio Code"'
 # brew install nvim
 alias v='nvim'
 alias dev='cd /Volumes/Dev/'
@@ -68,12 +67,12 @@ alias po='poetry'
 alias dn='dotnet'
 
 # Common files
-alias bashprofile='code ~/.bash_profile'
-alias bashrc='code ~/.bashrc'
-alias zprofile='code ~/.zprofile'
-alias zshrc='code ~/.zshrc'
-alias gitcf='code ~/.gitconfig'
-alias kubecf='code ~/.kube/config'
+alias bashprofile='zed ~/.bash_profile'
+alias bashrc='zed ~/.bashrc'
+alias zprofile='zed ~/.zprofile'
+alias zshrc='zed ~/.zshrc'
+alias gitcf='zed ~/.gitconfig'
+alias kubecf='zed ~/.kube/config'
 
 # FNM - Fast Node Manager
 # eval "$(fnm env --use-on-cd --shell bash)"
