@@ -10,7 +10,9 @@
     "context": "Workspace",
     "bindings": {
       "shift shift": "file_finder::Toggle",
-      "cmd-§": "workspace::ToggleLeftDock"
+      "cmd-§": "workspace::ToggleLeftDock",
+      "cmd-1": "project_panel::ToggleFocus",
+      "cmd-2": "git_panel::ToggleFocus"
     }
   },
   {
