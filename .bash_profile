@@ -10,6 +10,14 @@ if [ -f "$HOME/.bashrc" ]; then
     . "$HOME/.bashrc"
 fi
 
+# zoxide is a smarter cd command: https://github.com/ajeetdsouza/zoxide
+# brew install zoxide
+eval "$(zoxide init --cmd cd bash)"
+# fzf is a general-purpose command-line fuzzy finder
+# brew install fzf
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
 alias reload='. ~/.bash_profile && echo ".bash_profile has been reloaded ✅"'
 # brew install nvim
 alias v='nvim'
@@ -23,7 +31,7 @@ alias list5='eza --tree --level=5 --icons'
 alias path="echo $PATH | tr ':' '\n' | cat -n"
 
 # Helper shell scripts
-# export PATH="$PATH:/Volumes/Workspace/bin"
+# export PATH="$PATH:/Volumes/Dev/bin"
 
 # Git
 alias gcm='f() { git add . && git commit -m "$1" ; } ; f' # gcm "Your commit message"
