@@ -7,16 +7,13 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 # ensures that if a .bashrc file exists in the user’s home directory,
 # its contents are loaded into the current Bash session
 if [ -f "$HOME/.bashrc" ]; then
-    . "$HOME/.bashrc"
+    source "$HOME/.bashrc"
 fi
 
-# zoxide is a smarter cd command: https://github.com/ajeetdsouza/zoxide
-# brew install zoxide
-eval "$(zoxide init --cmd cd bash)"
-# fzf is a general-purpose command-line fuzzy finder
-# brew install fzf
-# Set up fzf key bindings and fuzzy completion
-eval "$(fzf --bash)"
+# .tokens file contains secrets that should not be committed to source control
+if [ -f "$HOME/dotfiles/.tokens" ]; then
+    source "$HOME/dotfiles/.tokens"
+fi
 
 alias reload='. ~/.bash_profile && echo ".bash_profile has been reloaded ✅"'
 # brew install nvim
@@ -85,3 +82,14 @@ alias kubecf='zed ~/.kube/config'
 # FNM - Fast Node Manager
 # eval "$(fnm env --use-on-cd --shell bash)"
 # alias n='fnm'
+
+# zoxide is a smarter cd command: https://github.com/ajeetdsouza/zoxide
+# brew install zoxide
+eval "$(zoxide init --cmd cd bash)"
+# fzf is a general-purpose command-line fuzzy finder
+# brew install fzf
+# Set up fzf key bindings and fuzzy completion
+# eval "$(fzf --bash)"
+
+# Added by Toolbox App
+export PATH="$PATH:/Users/phuong/Library/Application Support/JetBrains/Toolbox/scripts"

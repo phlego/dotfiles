@@ -19,7 +19,10 @@
     "context": "Editor",
     "bindings": {
       // "j k": ["workspace::SendKeystrokes", "escape"]
-      "cmd-l": "editor::DeleteLine"
+      "cmd-l": "editor::DeleteLine",
+      "alt-shift-f": "editor::Format",
+      "cmd-m cmd-m": "editor::FoldAll",
+      "cmd-m cmd-l": "editor::UnfoldAll"
     }
   }
 ]
