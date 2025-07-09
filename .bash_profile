@@ -3,7 +3,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # prioritize Homebrew’s binary directories,
 # ensuring tools like Homebrew’s Git are used over system defaults.
-export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
 # ensures that if a .bashrc file exists in the user’s home directory,
 # its contents are loaded into the current Bash session
 if [ -f "$HOME/.bashrc" ]; then
@@ -59,11 +59,11 @@ alias skaf='skaffold'
 # PS1='$(kube_ps1) \w $ '
 
 # Python
+# Symlink python to python3: ln -s /opt/homebrew/bin/python3 /opt/homebrew/bin/python
 alias p='python3'
 alias pip='pip3'
-alias pe='pipenv'
 alias pea='workon $(basename $(pipenv --venv))'
-alias po='poetry'
+alias activate='source .venv/bin/activate'
 
 # Go
 # export PATH=$PATH:$(go env GOPATH)/bin
@@ -93,3 +93,7 @@ eval "$(zoxide init --cmd cd bash)"
 
 # Added by Toolbox App
 export PATH="$PATH:/Users/phuong/Library/Application Support/JetBrains/Toolbox/scripts"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

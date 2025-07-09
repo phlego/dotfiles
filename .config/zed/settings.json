@@ -15,5 +15,6 @@
     "mode": "system",
     "light": "One Light",
     "dark": "One Dark"
-  }
+  },
+  "show_edit_predictions": false
 }
