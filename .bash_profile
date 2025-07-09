@@ -42,7 +42,6 @@ alias kx='f() { [ "$1" ] && kubectl config use-context $1 || kubectl config curr
 alias kn='f() { [ "$1" ] && kubectl config set-context --current --namespace $1 || kubectl config view --minify | grep namespace | cut -d" " -f6 ; } ; f'
 alias klocal='kx docker-desktop'
 alias kport='pf() { [ "$1" ] && kubectl port-forward "$1" "${2:-8080}:${2:-8080}" ; } ; pf'
-alias skaf='skaffold'
 
 # Display the current kubectl context in the Bash prompt
 # export KUBE_PS1_PREFIX=''
@@ -68,9 +67,6 @@ alias activate='source .venv/bin/activate'
 # Go
 # export PATH=$PATH:$(go env GOPATH)/bin
 
-# DotNET
-alias dn='dotnet'
-
 # Common files
 alias bashprofile='zed ~/.bash_profile'
 alias bashrc='zed ~/.bashrc'
@@ -92,7 +88,7 @@ eval "$(zoxide init --cmd cd bash)"
 # eval "$(fzf --bash)"
 
 # Added by Toolbox App
-export PATH="$PATH:/Users/phuong/Library/Application Support/JetBrains/Toolbox/scripts"
+export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
