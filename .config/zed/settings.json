@@ -7,14 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "git": {
+    "enable_status": true
+  },
   "ui_font_size": 16,
   "buffer_font_size": 18,
-  "restore_on_startup": "last_session",
+  "restore_on_startup": "last_workspace",
   "autosave": "on_window_change",
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
+    "light": "One Dark",
+    "dark": "One Dark",
   },
-  "show_edit_predictions": false
+  "show_edit_predictions": false,
 }
